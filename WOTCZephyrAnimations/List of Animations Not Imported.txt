@@ -1,0 +1,19 @@
+List of Animations Missing from AS_Soldier (WOTC):
+(Animations that were present in the CS Animset, but not in the WOTC AnimSet, so you did not copy them over)
+
+HL_FlinchPass
+
+HL_NanoMedikitA
+HL_OverdriveSerumA
+
+HL_Psi_NeuralNetwork_TargetA
+HL_TeamUpA*
+HL_TeleportDiscStartA
+HL_TeleportDiscStopA
+
+NO_FireStartA
+NO_FireStopA
+
+
+
+

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>13924e1e-ca92-49bd-ae9a-8a4238459123</Guid>
+    <Name>WOTCZephyrAnimations</Name>
+    <Description>A repository of hand-to-hand animations, originally made for Zephyr from Chimera Squad.</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>WOTCZephyrAnimations</AssemblyName>
+    <RootNamespace>WOTCZephyrAnimations</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Content" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\WOTCZephyrAnimations\" />
+    <Folder Include="Src\WOTCZephyrAnimations\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bugs.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\CSWOTCUnarmedAnimations.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="List of Animations Not Imported.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="List of Unreplaced for AS_Soldier_NoWeapon.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\WOTCZephyrAnimations\Classes\X2DownloadableContentInfo_WOTCZephyrAnimations.uc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>

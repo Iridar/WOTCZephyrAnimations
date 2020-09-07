@@ -1,0 +1,3 @@
+BUGS!
+
+NO_TurnRight180 LShin Unnecessary keyframe rotations spazzing out
