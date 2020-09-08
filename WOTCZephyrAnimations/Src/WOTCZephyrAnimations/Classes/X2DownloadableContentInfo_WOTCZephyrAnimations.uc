@@ -23,3 +23,50 @@ static event OnLoadedSavedGame()
 /// </summary>
 static event InstallNewCampaign(XComGameState StartState)
 {}
+
+
+
+static function UpdateAnimations(out array<AnimSet> CustomAnimSets, XComGameState_Unit UnitState, XComUnitPawn Pawn)
+{
+	local XComContentManager	Content;
+
+    if(!UnitState.IsSoldier()) return;
+
+	//`LOG("Updating animations for: " @ UnitState.GetFullName() @ "equipped weapon: " @ ItemState.GetMyTemplateName(),, 'IRIPUNCH');
+
+	//if (HasPrimaryKnuckleEquipped(UnitState))
+	//{
+		//if (HasSecondaryKnuckleEquipped(UnitState))
+		//{
+			//if (default.Force_Templar_ByTheBook_Armory_Attitude)
+			//{
+				UnitState.kAppearance.iAttitude = 0;
+				UnitState.UpdatePersonalityTemplate();
+			//}
+			Content = `CONTENT;
+
+			//`LOG("Check passed, patching animations",, 'IRIPUNCH');
+
+			//	## Vanilla AnimSets
+			//	Reattach Soldier animset to override anything done by Primary Secondaries.
+			CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("Soldier_ANIM.Anims.AS_Soldier")));
+			CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("Templar_ANIM.Anims.AS_Templar")));
+			CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("Soldier_Unarmed_ANIM.Anims.AS_UB_Soldier")));
+			CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("Soldier_Unarmed_ANIM.Anims.AS_UB_Medkit")));
+			CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("Soldier_Unarmed_ANIM.Anims.AS_UB_Skulljack")));
+			CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("Templar_ANIM.Anims.AS_UB_Grenade")));
+
+			//	## Custom AnimSets
+			//CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("IRI_PunchAndKick.Anims.AS_Unarmed_Idle")));
+			CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("CSWOTCUnarmedAnimations.Anims.AS_Soldier")));
+			CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("CSWOTCUnarmedAnimations.Anims.AS_Armory")));
+			CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("CSWOTCUnarmedAnimations.Anims.AS_Hellion")));
+			CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("CSWOTCUnarmedAnimations.Anims.AS_Armory")));
+		//}
+		//else if (HasBallisticShieldEquipped(UnitState))
+		//{
+		//	Content = `CONTENT;
+		//	CustomAnimSets.AddItem(AnimSet(Content.RequestGameArchetype("IRI_PunchAndKick.Anims.AS_Punch_Shield")));
+		//}
+	//}
+}

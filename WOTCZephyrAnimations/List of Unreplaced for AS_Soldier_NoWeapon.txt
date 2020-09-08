@@ -1,14 +1,5 @@
 List of Animations Missing from AS_Soldier_NoWeapon (original):
 
-ADD_HL_FireA
-ADD_HL_IdleA
-ADD_HL_Kidnap
-ADD_HL_Shadowbind_FadeIn
-ADD_HL_Shadowbind_FadeOut
-ADD_SpectralArmy_Death
-ADD_SpectralArmy_Restart
-ADD_SpectralArmy_Stop
-ADD_Zero
 FF_FireA
 FF_MeleeA
 FF_MeleeMissA
@@ -36,9 +27,6 @@ HL_ExtractKnowledge_Pose
 HL_HackStartA **Deleted
 HL_HackStopA **Deleted
 
-HL_IdleA_Base
-
-HL_IdleHiddenMovementA
 HL_Kidnap
 
 HL_MimicStopA **Deleted
@@ -88,7 +76,6 @@ HR_FlinchA
 HR_StepInA
 HR_StepOutA
 
-LL_IdleHiddenMovementA
 LL_MimicStartA **Deleted
 
 LL_SignalGoAheadLeft
